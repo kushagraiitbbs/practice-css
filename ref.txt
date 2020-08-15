@@ -1,2 +1,22 @@
-Hi
-This is just for practice
+//Hi
+//This is just for practice
+#include <bits/stdc++.h> 
+using namespace std; 
+bool checkprime(int x)
+{ if(x==1)   //since 1 is not a prime number
+   return False;
+  for(int i=2;i<=sqrt(x);i++)
+     if(x%i==0)  // if x is divided by any number upto sqrt(x) that means that x is not prime
+      return False;
+  return True;
+}
+
+int main()
+{ int n;
+  cin>>n;
+  if(checkprime(n))
+  cout<<"Number is prime";
+  else 
+  cout<<"Number is not prime";
+return 0;
+}
